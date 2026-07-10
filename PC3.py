@@ -40,12 +40,12 @@ import streamlit.components.v1 as components
 
 # Menú vertical en una barra lateral
 # Crea una barra lateral (sidebar) en la aplicación.
-with st.sidebar:
-    opciones = option_menu("Selecciona una sección: ",['Inicio', 'Experiencia', 'Gráficos'] , 
-        icons=['0-circle','1-circle', '2-circle'], menu_icon="filetype-py", default_index=0)
-    # Crea un menú de opciones dentro de la barra lateral -> option_menu(...)
+#with st.sidebar:
+   # selected = option_menu("Selecciona una sección: ",['Inicio', 'Experiencia', 'Gráficos'] , 
+    #    icons=['0-circle','1-circle', '2-circle'], menu_icon="filetype-py", default_index=0)
+    # Crea un menú de selected dentro de la barra lateral -> option_menu(...)
     # Título que se mostrará encima del menú -> "Selecciona una sección: "
-    # Lista de opciones disponibles para navegar -> ['Inicio', 'Experiencia', 'Gráficos']
+    # Lista de selected disponibles para navegar -> ['Inicio', 'Experiencia', 'Gráficos']
     # Iconos asociados a cada opción del menú -> ['0-circle','1-circle', '2-circle']
     # Icono principal que aparece junto al título del menú -> menu_icon="filetype-py"
     # Opción seleccionada por defecto (0 = Inicio) -> default_index=0
@@ -54,21 +54,21 @@ with st.sidebar:
 # OJO: Se puede eliminar el título del menú con None
 # Crea un menú de navegación horizontal y guarda la opción seleccionada por el usuario en la variable 'selected'
 selected = option_menu(
-    menu_title="Selecciona una sección: ", 
-    options=['Inicio', 'Experiencia', 'Gráficos'], 
-    icons=['person-heart', 'globe-americas', 'pencil-square'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-    # Título que aparece antes de las opciones del menú -> menu_title="Selecciona una sección: "
-    # Lista de opciones que estarán disponibles en el menú -> ['Inicio', 'Experiencia', 'Gráficos']
+    menu_title=None, 
+    options=['Inicio', 'Alfajores', 'Sobre nosotros'], 
+    icons=['bookmark-heart', 'hearts', 'bar-chart-line'], 
+    menu_icon=None, default_index=0, orientation="horizontal")
+    # Título que aparece antes de las selected del menú -> menu_title="Selecciona una sección: "
+    # Lista de selected que estarán disponibles en el menú -> ['Inicio', 'Experiencia', 'Gráficos']
     # Iconos asociados a cada opción del menú -> ['person-heart', 'globe-americas', 'pencil-square']
     # Icono principal que aparece junto al título del menú -> menu_icon="cast"
     # Opción seleccionada por defecto (0 = Inicio) -> default_index=0
     # Hace que el menú se muestre horizontalmente en lugar de verticalmente -> orientation="horizontal"
 
 # Verifica si el usuario ha seleccionado la opción "Inicio" en el menú de navegación horizontal.
-# OJO: En caso que elijas el menú de la barra lateral (sidebar) debes cambiar "selected" por "opciones"
-if opciones == 'Inicio':
-    st.markdown("<h1 style='text-align: center;'>Nombre del blog</h1>", unsafe_allow_html=True)
+# OJO: En caso que elijas el menú de la barra lateral (sidebar) debes cambiar "selected" por "selected"
+if selected == 'Inicio':
+    st.markdown("<h1 style='text-align: center;'>Lucidulzura</h1>", unsafe_allow_html=True)
     # Muestra un título principal utilizando HTML -> st.markdown("...", unsafe_allow_html=True)
     # La etiqueta <h1> define un encabezado de nivel 1 -> "<h1 ...>...</h1>"
     # El estilo CSS 'text-align: center' centra el texto -> style='text-align: center;'
@@ -78,20 +78,14 @@ if opciones == 'Inicio':
     col1, col2 = st.columns(2)
 
     # Muestra una imagen en la primera columna
-    col1.image("ellie.png", caption='Ellie', width=300)
+    col1.image("Ana.jpeg", caption='Ana', width=300)
     # "ellie.png" es el archivo de imagen que se visualizará -> Aquí debes reemplazar por tu foto de perfil
     # El texto "Ellie" aparecerá como descripción de la imagen
     # width=300 establece el ancho de la imagen en 300 píxeles
 
     # Define una cadena de texto multilínea que contiene una guía para redactar una presentación personal.
     texto = """
-    Aquí escribe una presentación creativa sobre ti.
-    ¿Quién eres?, 
-    ¿De dónde eres?, 
-    ¿Qué estudias?, 
-    ¿Qué te gusta de tu carrera?, 
-    ¿Qué te gustaría hacer en el futuro?, 
-    ¿Qué te gusta hacer en tu tiempo libre?
+    En Lucidulzura, transformamos la repostería tradicional en una experiencia de sabor única. Nos dedicamos a la elaboración artesanal de alfajores de chocolate premium y cupcakes finos, cuidando minuciosamente cada detalle, desde la calidad de nuestros ingredientes hasta la presentación final. Creamos el detalle perfecto para regalar, compartir o darte ese gusto que tanto te mereces. Calidad, frescura y dulzura en un solo lugar.
     """
 
     # Muestra el texto en la segunda columna utilizando HTML
@@ -100,17 +94,17 @@ if opciones == 'Inicio':
     # f"<div style='text-align: justify; font-size: 15px;'>{texto}</div>"
     # unsafe_allow_html=True permite que Streamlit interprete las etiquetas HTML incluidas en la cadena
 
-elif opciones == 'Experiencia':
-    st.markdown("<h1 style='text-align: center;'>Nombre a la sección de experiencia 💻</h1>", unsafe_allow_html=True)
+elif selected == 'Experiencia':
+    st.markdown("<h1 style='text-align: center;'> Mi experiencia programando 💻</h1>", unsafe_allow_html=True)
 
     # Agregar un  texto para la respuesta
     texto_2 = """
-    Aquí escribe tu experiencia aprendiendo a programar. 
-    ¿Cómo te sentiste al principio?, 
-    ¿Qué te ha enseñado la programación?, 
-    ¿Qué te gusta de programar?, 
-    ¿Qué te gustaría hacer con la programación en el futuro?
-    ¿Cómo se relaciona lo que haz aprendido con tu carrera?
+    Aprendí diferentes comandos de programación que antes no sabia manejar bien, comprendo que la programación es compleja porque al más minimo error tu trabajo puede no poder ejecutarse corractamente. 
+    Al inicio estaba nerviosa porque no conocia demasiado de programación, 
+    Es necesario ser bastante ordenado para que tus codigos y la información que con la que desees trabajar sea un proceso rápido, 
+    Me gusta visualizar que cada codigo tiene una función y nos permite previsualizar lo que estamos creando, 
+    Me gustaria seguir aprendiendo y desarrollar trabajos más complejos, conseguí encontrarle el gusto.
+    Este trabajo es útil para cualquier carrera de comunicaciones porque la programación te permite conocer el funcionamiento del entorno digital y facilita la comprensión de los sitios wed o aplicaciones.
     """
 
     # Mostramos el texto
@@ -119,31 +113,59 @@ elif opciones == 'Experiencia':
     # Formato A
     # Agregamos todo los videos realizados en las prácticas anteriores
     # Muestra un subtítulo para identificar el contenido del video
-    st.subheader("🎥 Video 1 - YouTube")
+    #st.subheader("🎥 Video 1 - YouTube")
     # Inserta un video de YouTube directamente en la aplicación.
     # El usuario puede reproducirlo sin salir de Streamlit.
-    st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
+    #st.video("https://www.youtube.com/watch?v=X_Z7d04x9-E")
     # Agrega una breve descripción del video.
-    st.caption(
-        "En este video se presenta ...., "
-    )
+    #st.caption(
+    #   "En este video se presenta ...., "
+    #)
 
     # Formato B
     # Muestra un subtítulo para identificar el contenido del video
-    st.subheader("🎥 Video 1 - Google Drive")
+    st.subheader("🎥 Video 1 - Diferencias entre strings y listas ")
     # Crea un botón que redirige al usuario a un video alojado en Google Drive. 
     # Al hacer clic, el video se abrirá en una nueva pestaña del navegador.
     st.link_button(
             "Ver video",
-            "https://drive.google.com/file/d/1REvRXSu3GuGD73w8j44135MkRiezd0gP/view?usp=drive_link"
+            "https://canva.link/hpbib9zh7qu3t0d"
         )
     # Agrega una breve descripción del video.
     st.caption(
-        "En este video se presenta ...., "
+        "En este video se presenta una explicación detallada de como se definen los strings y las listas, sus funciones y diferencias al usarlos en los codigos de colab. También se presentan diferentes ejemplos para determinar las situaciones donde más recomendable usar estos codigos."
+    )
+   
+   # Formato B
+    # Muestra un subtítulo para identificar el contenido del video
+    st.subheader("🎥 Video 2 - Diferencias entre los bucles for y while ")
+    # Crea un botón que redirige al usuario a un video alojado en Google Drive. 
+    # Al hacer clic, el video se abrirá en una nueva pestaña del navegador.
+    st.link_button(
+            "Ver video",
+            "https://canva.link/rbkg3dluhxar8d9"
+        )
+    # Agrega una breve descripción del video.
+    st.caption(
+        "En el segundo video explicó las diferencias entre los bucles for y while con diversos ejemplos, ambos ayudan a controlar los bucles dependiendo la función. "
     )
 
-elif opciones == 'Gráficos':
-    st.markdown("<h2 style='text-align: center;'>Nombre a la sección 'Gráficos'</h2>", unsafe_allow_html=True)
+# Formato B
+    # Muestra un subtítulo para identificar el contenido del video
+    st.subheader("🎥 Video 3 - Lucidulzura ")
+    # Crea un botón que redirige al usuario a un video alojado en Google Drive. 
+    # Al hacer clic, el video se abrirá en una nueva pestaña del navegador.
+    st.link_button(
+            "Ver video",
+            "https://canva.link/sekfxj7b57e9oaf"
+        )
+    # Agrega una breve descripción del video.
+    st.caption(
+        "Este trabajo se relaciona con mi última actividad del curso, me énfoco en explicar la intención de mi blog y el motivo por el que es necesario su creación. Además especifico el contenido que tendra y como ayudara a diferentes usuarios."
+    )
+
+elif selected == 'Gráficos':
+    st.markdown("<h2 style='text-align: center;'>Gráficos vistos en el curso</h2>", unsafe_allow_html=True)
 
     graficos = ['Gráfico_1', 'Gráfico_2', 'Mapa_1']
 
@@ -152,13 +174,13 @@ elif opciones == 'Gráficos':
     # Mostramos el gráfico seleccionado
     if grafico_seleccionado == 'Gráfico_1':
         # Título de la sección
-        st.subheader("📊 Gráfico 1: Lenguas aisladas")
+        st.subheader("📊 Gráfico 1: nube_de_palabras.png")
 
         # Interpretación del gráfico
         st.markdown(
             """
             <div style='text-align: justify; font-size: 20px;'>
-            Aquí debe ir una breve interpretación de tu gráfico.
+          A través de la descarga del documento "harry_potter_1.txt", extraimos la mayor cantidad de veces que aparece cada palabra de la lista y elaboramos una nube de palabras con oraciones relacionadas con la saga de la película.
             </div>
             """,
             unsafe_allow_html=True
@@ -169,19 +191,19 @@ elif opciones == 'Gráficos':
 
         with col4:
             st.image(
-                "aisladas_base_datos.png",
+                "nube_de_palabras.png",
                 width=800
             )
 
     elif grafico_seleccionado == 'Gráfico_2':
         # Título de la sección
-        st.subheader("📊 Gráfico 2: Familias lingüísticas")
+        st.subheader("📊 Gráfico 2: Histograma de goles")
 
         # Interpretación del gráfico
         st.markdown(
             """
             <div style='text-align: justify; font-size: 18px;'>
-            Aquí debe ir una breve interpretación del gráfico.
+            En el histograma se presentan la cantidad de goles que realizo el Real Madrid como visitante y local. Además, tenemos la información de los goles recibidos para hacer una comparación más completa.
             </div>
             """,
             unsafe_allow_html=True
@@ -192,25 +214,25 @@ elif opciones == 'Gráficos':
 
         with col7:
             st.image(
-                "lengua_familia_GB.png",
+                "histograma.png",
                 width=800
             )
     elif grafico_seleccionado == 'Mapa_1':
         # Título de la sección
-        st.subheader("🗺️ Mapa 1: Distribución geográfica")
+        st.subheader("🗺️ Mapa 1: Top 5 de mis peliculas favoritas")
 
         # Interpretación del mapa
         st.markdown(
             """
             <div style='text-align: justify; font-size: 18px;'>
-            Aquí debe ir una breve interpretación del mapa.
+              El mapa muestran los paises donde se realizaron mis 5 peliculas favoritas; para elaborarlo primero realice un diccionario señalando el año, director, género, duración, país, longitud y latitud. Luego instale una libreria para crear mapas interactivos y para culminar mi trabajo e identificar los lugares, añadi marcadores.
             </div>
             """,
             unsafe_allow_html=True
         )
 
         # Cargar el mapa HTML generado previamente
-        with open("mapa.html", "r", encoding="utf-8") as f:
+        with open("mapaPC3.html", "r", encoding="utf-8") as f:
             html_content = f.read()
 
         # Mostrar el mapa interactivo
