@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_64f5f508636a494a642c286044a08ab4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_64f5f508636a494a642c286044a08ab4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_64f5f508636a494a642c286044a08ab4 = L.map(
+                "map_64f5f508636a494a642c286044a08ab4",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a683b9baae723bf91d30e5a42354f3ae = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a683b9baae723bf91d30e5a42354f3ae.addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+            var marker_f44a79b79b47d432700c49732918b886 = L.marker(
+                [49.2827, -123.1207],
+                {
+}
+            ).addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+        var popup_cdb7a231d7ce238adb86243c3a4180dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_435b10a80c2fac79ed1a700fb027a254 = $(`<div id="html_435b10a80c2fac79ed1a700fb027a254" style="width: 100.0%; height: 100.0%;">     <b>Titanic</b><br>     Director: James Cameron<br>     Año: 1997<br>     Género: Drama/Romance<br>     Duración: 195 min<br>     País: Estados Unidos     </div>`)[0];
+                popup_cdb7a231d7ce238adb86243c3a4180dc.setContent(html_435b10a80c2fac79ed1a700fb027a254);
+            
+        
+
+        marker_f44a79b79b47d432700c49732918b886.bindPopup(popup_cdb7a231d7ce238adb86243c3a4180dc)
+        ;
+
+        
+    
+    
+            marker_f44a79b79b47d432700c49732918b886.bindTooltip(
+                `<div>
+                     Titanic
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b9bfbcac392bad55da4742cdc591fb71 = L.marker(
+                [51.1789, -1.8262],
+                {
+}
+            ).addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+        var popup_21e6ec30f677f74bbf8a05a4075f7714 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a562bc9ab9323b7ec43293c84c87a78 = $(`<div id="html_8a562bc9ab9323b7ec43293c84c87a78" style="width: 100.0%; height: 100.0%;">     <b>Interestelar</b><br>     Director: Christopher Nolan<br>     Año: 2014<br>     Género: Ciencia ficción<br>     Duración: 169 min<br>     País: Estados Unidos     </div>`)[0];
+                popup_21e6ec30f677f74bbf8a05a4075f7714.setContent(html_8a562bc9ab9323b7ec43293c84c87a78);
+            
+        
+
+        marker_b9bfbcac392bad55da4742cdc591fb71.bindPopup(popup_21e6ec30f677f74bbf8a05a4075f7714)
+        ;
+
+        
+    
+    
+            marker_b9bfbcac392bad55da4742cdc591fb71.bindTooltip(
+                `<div>
+                     Interestelar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7de684e017071beb50ba726f792803dd = L.marker(
+                [34.0522, -118.2437],
+                {
+}
+            ).addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+        var popup_87d384a2642ae5b55aee37abf3e37334 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ec2d8a8859629612fa4251565307cab = $(`<div id="html_5ec2d8a8859629612fa4251565307cab" style="width: 100.0%; height: 100.0%;">     <b>Spider-Man: Into the Spider-Verse</b><br>     Director: Bob Persichetti, Peter Ramsey y Rodney Rothman<br>     Año: 2018<br>     Género: Animación/Acción<br>     Duración: 117 min<br>     País: Estados Unidos     </div>`)[0];
+                popup_87d384a2642ae5b55aee37abf3e37334.setContent(html_5ec2d8a8859629612fa4251565307cab);
+            
+        
+
+        marker_7de684e017071beb50ba726f792803dd.bindPopup(popup_87d384a2642ae5b55aee37abf3e37334)
+        ;
+
+        
+    
+    
+            marker_7de684e017071beb50ba726f792803dd.bindTooltip(
+                `<div>
+                     Spider-Man: Into the Spider-Verse
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f067489e00e2823a69753a31cf76f3bc = L.marker(
+                [34.0689, -118.4452],
+                {
+}
+            ).addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+        var popup_a0555f1f66223746eb1c833b3d69aff2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_633b9b6f323e24252f512d271323a103 = $(`<div id="html_633b9b6f323e24252f512d271323a103" style="width: 100.0%; height: 100.0%;">     <b>Legalmente Rubia</b><br>     Director: Robert Luketic<br>     Año: 2001<br>     Género: Comedia<br>     Duración: 96 min<br>     País: Estados Unidos     </div>`)[0];
+                popup_a0555f1f66223746eb1c833b3d69aff2.setContent(html_633b9b6f323e24252f512d271323a103);
+            
+        
+
+        marker_f067489e00e2823a69753a31cf76f3bc.bindPopup(popup_a0555f1f66223746eb1c833b3d69aff2)
+        ;
+
+        
+    
+    
+            marker_f067489e00e2823a69753a31cf76f3bc.bindTooltip(
+                `<div>
+                     Legalmente Rubia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9f547d604a4edd04b853280ad4e24b38 = L.marker(
+                [51.5072, -0.1276],
+                {
+}
+            ).addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+    
+        var popup_397ab5bf7629ea76dbd53694ab00d106 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_536cd215dadd347d84185ecf4d75a143 = $(`<div id="html_536cd215dadd347d84185ecf4d75a143" style="width: 100.0%; height: 100.0%;">     <b>Yo Antes de Ti</b><br>     Director: Thea Sharrock<br>     Año: 2016<br>     Género: Drama/Romance<br>     Duración: 110 min<br>     País: Reino Unido     </div>`)[0];
+                popup_397ab5bf7629ea76dbd53694ab00d106.setContent(html_536cd215dadd347d84185ecf4d75a143);
+            
+        
+
+        marker_9f547d604a4edd04b853280ad4e24b38.bindPopup(popup_397ab5bf7629ea76dbd53694ab00d106)
+        ;
+
+        
+    
+    
+            marker_9f547d604a4edd04b853280ad4e24b38.bindTooltip(
+                `<div>
+                     Yo Antes de Ti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_a683b9baae723bf91d30e5a42354f3ae.addTo(map_64f5f508636a494a642c286044a08ab4);
+        
+</script>
+</html>
