@@ -5,7 +5,13 @@
 # python -m venv .venv
 # Esto nos permite crear un entorno virtual donde instalaremos Streamlit 
 # y observaremos la página web que se está generando en este script.
-from streamlit_option_menu import option_menu
+import streamlit as st
+# Herramienta para crear menús de navegación personalizados en Streamlit.
+from streamlit_option_menu import option_menu  # <--- ¡AÑADE ESTA LÍNEA!
+
+# Este módulo permite incrustar componentes personalizados escritos en HTML, CSS y JavaScript dentro de una aplicación.
+# components.html() permite mostrar código HTML interactivo directamente en la interfaz.
+import streamlit.components.v1 as components
 # Opcional: Activaremos el entorno virtual.
 # En Windows:
 # .venv\Scripts\activate
