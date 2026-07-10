@@ -93,7 +93,7 @@ if selected == 'Inicio':
     # f"<div style='text-align: justify; font-size: 15px;'>{texto}</div>"
     # unsafe_allow_html=True permite que Streamlit interprete las etiquetas HTML incluidas en la cadena
 
-elif selected == 'Experiencia':
+elif selected == 'Alfajores':
     st.markdown("<h1 style='text-align: center;'> Mi experiencia programando 💻</h1>", unsafe_allow_html=True)
 
     # Agregar un  texto para la respuesta
@@ -163,7 +163,7 @@ elif selected == 'Experiencia':
         "Este trabajo se relaciona con mi última actividad del curso, me énfoco en explicar la intención de mi blog y el motivo por el que es necesario su creación. Además especifico el contenido que tendra y como ayudara a diferentes usuarios."
     )
 
-elif selected == 'Gráficos':
+elif selected == 'Sobre nosotros':
     st.markdown("<h2 style='text-align: center;'>Gráficos vistos en el curso</h2>", unsafe_allow_html=True)
 
     graficos = ['Gráfico_1', 'Gráfico_2', 'Mapa_1']
