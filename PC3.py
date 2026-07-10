@@ -5,7 +5,7 @@
 # python -m venv .venv
 # Esto nos permite crear un entorno virtual donde instalaremos Streamlit 
 # y observaremos la página web que se está generando en este script.
-
+from streamlit_option_menu import option_menu
 # Opcional: Activaremos el entorno virtual.
 # En Windows:
 # .venv\Scripts\activate
