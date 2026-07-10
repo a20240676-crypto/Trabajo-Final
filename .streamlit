@@ -1,0 +1,7 @@
+[theme]
+primaryColor="#CCDFFF"
+backgroundColor="#CCDFFF"
+secondaryBackgroundColor="#ACACFA"
+textColor="#4B3B7D"
+font = "Thin 100 Italic"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
