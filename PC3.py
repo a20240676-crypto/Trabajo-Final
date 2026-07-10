@@ -33,7 +33,6 @@
 # Librería principal para desarrollar aplicaciones web con Streamlit.
 import streamlit as st
 # Herramienta para crear menús de navegación personalizados en Streamlit.
-from streamlit_option_menu import option_menu
 # Este módulo permite incrustar componentes personalizados escritos en HTML, CSS y JavaScript dentro de una aplicación.
 # components.html() permite mostrar código HTML interactivo directamente en la interfaz.
 import streamlit.components.v1 as components
